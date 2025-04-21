@@ -1,0 +1,376 @@
+body {
+    background-color: #129f00; /* Green background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Stack the cards vertically for now */
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Styles for the First Page (Payment Card) */
+.payment-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50% !important;
+    margin-top: 0% !important;
+    margin-bottom: 0% !important;
+}
+.user-info {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.avatar {
+    width: 70px; /* Adjust avatar size */
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 10px; /* Space below avatar */
+    margin-left: -25px; /* Remove potential right margin */
+}
+
+.user-details {
+    text-align: center;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+.description {
+    color: gray;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.amount {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 6px;
+    margin-top: 70px;
+}
+
+.message {
+    color: gray;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.timestamp {
+    color: gray;
+    font-size: 0.9em;
+    margin-bottom: 90px;
+}
+
+.actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.actions a, .actions button {
+    width: 100%;
+    padding: 12px 8px;
+    border-radius: 16px;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: 0;
+}
+
+.accept {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.decline {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Styles for the Second Page (Login Card) */
+.login-card {
+    background-color: #F5F5F5; /* Light gray background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    border: 12px solid black;
+}
+
+.login-card h1 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.login-card p {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.login-card .illustration {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.login-card .illustration img {
+    max-width: 100%;
+    height: auto;
+    width: 150px;
+}
+
+.login-card .login-text {
+    margin-top: 25px;
+    font-size: 0.9em;
+    color: #555;
+}
+input:focus,
+textarea:focus {
+  outline-color: green;
+  outline-style: auto;
+}
+
+.login-card h2 {
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.login-card .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.login-card .input-group input {
+    padding: 12px;
+    border: 2px solid green;
+    border-radius: 8px;
+    font-size: 0.9em;
+}
+
+.login-card .submit-link {
+    text-decoration: none;
+}
+
+.login-card .submit-button {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+/* Styles for the Third Page (Verify Card) */
+.verify-card {
+    background-color: #F5F5F5; /* Light gray background */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+}
+
+.verify-card h1 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.verify-card p {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.verify-card .illustration {
+    margin-bottom: 20px;
+}
+
+.verify-card .illustration img {
+    max-width: 100%;
+    height: auto;
+    width: 150px;
+}
+
+.verify-card .login-text {
+    margin-top: 25px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.verify-card h2 {
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.verify-card .check-email {
+    font-size: 0.8em;
+    color: #777;
+    margin-bottom: 20px; /* Increased margin */
+}
+
+.verify-card .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.verify-card .input-group input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 0.9em;
+    text-align: center; /* Center the input text */
+}
+
+.verify-card .submit-button {
+    background-color: #2ecc71; /* Green submit button */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 30px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+}
+.new-data-highlight {
+    background-color: #f0fff0; /* Light green */
+    transition: background-color 1s ease-in-out;
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 601px) {
+    .container {
+        flex-direction: row; /* Display cards side-by-side on larger screens */
+        justify-content: space-around;
+    }
+
+    .payment-card, .login-card, .verify-card {
+        max-width: 300px; /* Adjust width for larger screens */
+        margin-bottom: 0; /* Remove bottom margin when side-by-side */
+    }
+
+    .payment-card {
+        width: 40%;
+    }
+
+    .login-card h1, .verify-card h1 {
+        font-size: 1.8em;
+    }
+
+    .login-card p, .verify-card p {
+        font-size: 1em;
+    }
+
+    .login-card h2, .verify-card h2 {
+        font-size: 1.3em;
+    }
+
+    .login-card .input-group input, .verify-card .input-group input {
+        padding: 15px;
+        font-size: 1em;
+    }
+
+    .login-card .submit-button, .verify-card .submit-button {
+        padding: 18px 35px;
+        font-size: 1.1em;
+    }
+
+    .verify-card .check-email {
+        font-size: 0.9em;
+    }
+}   
+
+@media (max-width: 667px  )  {
+    .payment-card {
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 25px;
+        text-align: center;
+        width: 60%;
+        max-width: 400px;
+        /* margin: 20px auto; */
+        /* display: flex; */
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        /* height: -1vh; */
+        min-height: 0;
+    } 
+    .login-card {
+        /* background-color: #F5F5F5; */
+        /* border-radius: 15px; */
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+        padding: 17px;
+        /* text-align: center; */
+        width: 80%;
+        /* margin-top: 10px; */
+        /* margin-bottom: 10px; */
+    }
+    .verify-card {
+       
+        width: 60%;
+        /* max-width: 350px; */
+    }
+    .amount {
+        margin-top: 60px;
+    }
+
+}
+@media (max-width: 1000px) {
+    .payment-card {
+        width: 14% !important;
+        margin-top: 10% !important;
+        margin-bottom: 10% !important;
+    }
+}
+@media (max-width: 667px) {
+    .payment-card {
+        width: 50% !important;
+        margin-top: 0% !important;
+        margin-bottom: 0% !important;
+    }
+}
+
